@@ -1,1 +1,27 @@
+[
+   {
+      "person_id": 1,
+      "person_fname": "Jhon",
+      "person_lname": "Son",
+      "generation":1,
+      "gender": "M",
+      "person_meta": "His brother",
+      "person_father_id": 2,
+      "person_mother_id": 4,
+      "person_spouses": [1,2,3,4],
+      "person_childrens_ids": [1,2,3,4]
+   },
+   {
+      "person_id": 2,
+      "person_fname": "Marks",
+      "person_lname": "Fentos",
+      "generation":1,
+      "gender": "M",
+      "person_meta": "She has brother",
+      "person_father_id": 5,
+      "person_mother_id": 6,
+      "person_spouses": [5,6,],
+      "person_childrens_ids": [4]
+   }
 
+]
