@@ -1,0 +1,24 @@
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>FT</title>
+
+	<!-- INCLUDING JQUERY-->
+	<script src="https://code.jquery.com/jquery-3.5.1.js">
+	</script>
+</head>
+
+<body>
+	<script>
+		$(document).ready(function () {
+			$.getJSON("https://github.com/AezazDesai/aezazdesai.github.io/blob/add35d7689080982b45c6242b3745fc0c00643c9/FT.json", function (data) {
+				$.each(data, function (key, value) {
+				  $(document).log(value.person_id, value.person_fname, value.person_lname, value.generation, value.gender, value.person_meta, value.person_father_id, value.person_mother_id, value.person_spouses, value.person_childrens_ids)
+				});
+			});
+		});
+	</script>
+</body>
+
+</html>
