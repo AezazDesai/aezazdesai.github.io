@@ -10,14 +10,15 @@
 </head>
 
 <body>
+	<div id="div_id"></div>
 	<script>
 		  async function loadNames() {
 		  const response = await fetch('FT.json');
 		  const names = await response.json();
 		  console.log(names);
-			
 			  $.each(names, function (key, value) {
-				console.log(value.person_fname);
+				  
+				$('#div_id').append(value.person_fname);
 			  });
 		}
 		loadNames();
