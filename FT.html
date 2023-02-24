@@ -12,17 +12,17 @@
 <body>
 	<div id="div_id"></div>
 	<script>
-		  async function loadNames() {
+		  async function loadFT() {
 		  const response = await fetch('FT.json');
-		  const names = await response.json();
-		  console.log(names);
-			  $.each(names, function (key, value) {
+		  const data = await response.json();
+		  console.log(data);
+			  $.each(data, function (key, value) {
 				  
 				$('#div_id').append(value.person_fname+' '+value.person_lname+' married with '+names[value.person_spouses]);
 				$('#div_id').append('<br><br>');
 			  });
 		}
-		loadNames();
+		loadFT();
 	</script>
 </body>
 
