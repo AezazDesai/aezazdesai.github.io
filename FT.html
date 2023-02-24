@@ -13,7 +13,8 @@
 	<script>
 		$(document).ready(function () {
 			$.getJSON("/FT.json", function (data) {
-				console.log(data);
+				console.log(data)
+				console.log('Test')
 				$.each(data, function (key, value) {
 				 console.log(value.person_idconsole.log, value.person_fname, value.person_lname, value.generation, value.gender, value.person_meta, value.person_father_id, value.person_mother_id, value.person_spouses, value.person_childrens_ids)
 				});
