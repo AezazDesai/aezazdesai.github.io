@@ -11,16 +11,16 @@
 
 <body>
 	<script>
-			console.log("Test-1");
-// 				 console.log(value.person_idconsole+' '+value.person_fname+' '+value.person_lname, value.generation, value.gender, value.person_meta, value.person_father_id, value.person_mother_id, value.person_spouses, value.person_childrens_ids)
+		console.log("Test-1");
+// 		console.log(value.person_idconsole+' '+value.person_fname+' '+value.person_lname, value.generation, value.gender, value.person_meta, value.person_father_id, value.person_mother_id, value.person_spouses, value.person_childrens_ids)
 
 		
 		  async function loadNames() {
-			console.log("Test-1")
+		  console.log("Test-2")
 		  const response = await fetch('FT.json');
 		  const names = await response.json();
 		  console.log(names);
-			console.log("Test-3")
+		  console.log("Test-3")
 		}
 		console.log("Test-4")
 		loadNames();
