@@ -16,10 +16,10 @@
 		  const response = await fetch('FT.json');
 		  const names = await response.json();
 		  console.log(names);
-// 			  $.each(names, function (key, value) {
+			  $.each(names, function (key, value) {
 				  
-				$('#div_id').append(person_fname+' '+person_lname+' married with '+names[person_mother_id]);
-// 			  });
+				$('#div_id').append(value.person_fname+' '+value.person_lname+' married with '+names[value.person_mother_id]);
+			  });
 		}
 		loadNames();
 	</script>
