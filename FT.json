@@ -20,7 +20,7 @@
       "person_meta": "She has brother",
       "person_father_id": 5,
       "person_mother_id": 6,
-      "person_spouses": [5,6,],
+      "person_spouses": [5,6],
       "person_childrens_ids": [4]
    }
 
