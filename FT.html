@@ -19,7 +19,7 @@
 			  
 		  const filteredArray = dataArray.filter((item) => {
 
-		  return item.generation;
+		  return item.generation > 0;
 		});
 		$('#div_id').append(filteredArray+'<br><br>');
 // 			  $.each(data, function (key, value) {
