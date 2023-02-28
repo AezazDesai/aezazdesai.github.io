@@ -12,21 +12,27 @@
 <body>
 	<div id="div_id"></div>
 	<script>
-		  async function loadFT() {
-		  const response = await fetch('FT.json');
-		  const dataArray = await response.json();
-		  console.log(dataArray);
-			  
-		  const filteredArray = dataArray.filter((item) => {
+		async function loadFT(){
+			const response = await fetch('FT.json');
+			const dataArray = await response.json();
+			console.log(dataArray);
+			
+			function findSpouseById(spouseId){
+				const idToFind = spouseId;
+				const foundObject = jsonData.find(obj => obj.id === idToFind);
 
-		  return item.generation > 0;
-		});
-		  console.log(filteredArray);
-// 			  $.each(data, function (key, value) {
-				 
-// 				$('#div_id').append(value.person_fname+' '+value.person_lname+' married with '+names[value.person_spouses]);
-// 				$('#div_id').append('<br><br>');
-// 			  });
+				if (foundObject) {
+					const spouseFirstName = foundObject.fname;
+					const spouseLastName = foundObject.lname;
+					const spouseFullName = spouseFirstName+' '+spouseLastName;
+					return(spouseFullName);
+			}
+		  
+			
+			$.each(data, function (key, value) { 
+				$('#div_id').append(value.person_fname+' '+value.person_lname+' married with '+findSpouseById(value.person_spouses));
+				$('#div_id').append('<br><br>');
+			});
 		}
 		loadFT();
 	</script>
