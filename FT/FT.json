@@ -8,7 +8,7 @@
       "person_meta": "His brother",
       "person_father_id": 2,
       "person_mother_id": 4,
-      "person_spouses": [2],
+      "person_spouses": 2,
       "person_childrens_ids": [1,2,3,4]
    },
    {
@@ -20,7 +20,7 @@
       "person_meta": "She has brother",
       "person_father_id": 5,
       "person_mother_id": 6,
-      "person_spouses": [1],
+      "person_spouses": 1,
       "person_childrens_ids": [4]
    },
    {
@@ -32,7 +32,7 @@
       "person_meta": "She has brother",
       "person_father_id": 5,
       "person_mother_id": 6,
-      "person_spouses": [1],
+      "person_spouses": 1,
       "person_childrens_ids": [4]
    }
 
