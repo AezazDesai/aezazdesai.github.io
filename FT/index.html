@@ -18,18 +18,12 @@
 			console.log(dataArray);
 			
 			function findSpouseById(spouseId){
-				alert('In Function');
 				const idToFind = spouseId;
-				alert('Print Spouse ID: '+idToFind);
 				const foundObject = dataArray.find(obj => obj.person_id === idToFind);
-				alert('Found Object? > '+foundObject);
 				if (foundObject) {
 					const spouseFirstName = foundObject.person_fname;
-					alert('Spouse FN: '+spouseFirstName);
 					const spouseLastName = foundObject.person_lname;
-					alert('Spouse LN: '+spouseLastName);
 					const spouseFullName = spouseFirstName+' '+spouseLastName;
-					alert('Spouse FLN: '+spouseFullName);
 					return(spouseFullName);
 				}else{alert('else');}
 			}
