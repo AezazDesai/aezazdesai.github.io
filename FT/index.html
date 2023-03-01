@@ -21,7 +21,7 @@
 				alert('1');
 				const idToFind = spouseId;
 				alert(idToFind);
-				const foundObject = jsonData.find(obj => obj.id === idToFind);
+				const foundObject = dataArray.find(obj => obj.id === idToFind);
 				alert(foundObject);
 				if (foundObject) {
 					const spouseFirstName = foundObject.person_fname;
