@@ -20,12 +20,16 @@
 			function findSpouseById(spouseId){
 				alert('1');
 				const idToFind = spouseId;
+				alert(idToFind);
 				const foundObject = jsonData.find(obj => obj.id === idToFind);
-
+				alert(foundObject);
 				if (foundObject) {
 					const spouseFirstName = foundObject.person_fname;
+					alert(spouseFirstName);
 					const spouseLastName = foundObject.person_lname;
+					alert(spouseLastName);
 					const spouseFullName = spouseFirstName+' '+spouseLastName;
+					alert(spouseFullName);
 					return(spouseFullName);
 				}
 			}
