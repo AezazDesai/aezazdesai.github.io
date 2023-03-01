@@ -17,7 +17,8 @@
 			const dataArray = await response.json();
 			console.log(dataArray);
 			
-			function findSpouseById(spouseId, jsonData){
+			function findSpouseById(spouseId){
+				alert('1');
 				const idToFind = spouseId;
 				const foundObject = jsonData.find(obj => obj.id === idToFind);
 
@@ -31,7 +32,7 @@
 		  
 			
 			$.each(dataArray, function (key, value) { 
-				$('#div_id').append(value.person_fname+' '+value.person_lname+' married with '+findSpouseById(value.person_spouses, dataArray));
+				$('#div_id').append(value.person_fname+' '+value.person_lname+' married with '+findSpouseById(value.person_spouses));
 				$('#div_id').append('<br><br>');
 			});
 		}
