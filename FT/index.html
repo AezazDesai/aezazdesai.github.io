@@ -23,8 +23,8 @@
 				const foundObject = jsonData.find(obj => obj.id === idToFind);
 
 				if (foundObject) {
-					const spouseFirstName = foundObject.fname;
-					const spouseLastName = foundObject.lname;
+					const spouseFirstName = foundObject.person_fname;
+					const spouseLastName = foundObject.person_lname;
 					const spouseFullName = spouseFirstName+' '+spouseLastName;
 					return(spouseFullName);
 				}
