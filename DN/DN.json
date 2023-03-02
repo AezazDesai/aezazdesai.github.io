@@ -1,0 +1,30 @@
+{
+   "death_data": {
+     "marhoom_data": [
+       {
+         "grave_id": "1",
+         "person_name": "Tom",
+         "person_meta": "His brother",
+         "eng_date": "",
+         "hij_date": "",
+         "dob": "",
+         "age": "",
+         "grave_line": "",
+         "grave_number": "",
+         "namaz_e_janazah": "",
+       }
+     ],
+     "yearly_milestone": [
+       {
+         "year_id": "1",
+         "year": "2000",
+       }
+     ],
+     "linewise_milestone": [
+       {
+         "line_id": "1",
+         "line_number": "1",
+       }
+     ]
+   }
+ }
