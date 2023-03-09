@@ -9,21 +9,21 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
     <script>
-      // COPY TO CLIPBOARD
+      // SHARE GRAVE LINK
         function share_grave_link(event) {
           event.preventDefault(); 
           var link = $(this).attr("href");
-          var url  = "https://jogwad.blogspot.com/2015/05/death-note-of-jogwad-village.html"+link;
+          var new_link  = "https://jogwad.blogspot.com/2015/05/death-note-of-jogwad-village.html/"+link;
           //navigator.clipboard.writeText(url)
 	if (navigator.share) {
 	  navigator.share({
 	    title: document.title,
-	    url: url
+	    url: new_link
 	  })
 	    .then(() => console.log('Successful share'))
 	    .catch((error) => console.log('Error sharing', error));
 	}
-	}
+// 	}
 
       // SHOW ALL DATA ORDER BY DATE
       async function loadDN(){
