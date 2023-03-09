@@ -11,16 +11,15 @@
     <script>
       // COPY TO CLIPBOARD
         $(".copy-link").click(function(event) {
-          event.preventDefault(); 
-          var link = $(this).attr("href");
-          var url  = "https://jogwad.blogspot.com/2015/05/death-note-of-jogwad-village.html"+link; 
-          navigator.clipboard.writeText(url)
-            .then(() => {
-              alert("Link copied to clipboard");
-            })
-            .catch((error) => {
-              alert("Failed to copy link: ", error);
-            });
+  var url = "https://example.com"+event; // replace with your URL
+  if (navigator.share) {
+    navigator.share({
+      title: document.title,
+      url: url
+    })
+      .then(() => console.log('Successful share'))
+      .catch((error) => console.log('Error sharing', error));
+  } 
         });
 
       // SHOW ALL DATA ORDER BY DATE
