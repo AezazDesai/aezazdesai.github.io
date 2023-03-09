@@ -32,7 +32,7 @@
         
         // Sort the JSON data array by the date property
 			  dataArray.sort(function(a, b){
-				return new Date(a.date) - new Date(b.date);
+				return new Date(a.eng_date) - new Date(b.eng_date);
 			});
         
         $.each(dataArray, function (key, value) { 
