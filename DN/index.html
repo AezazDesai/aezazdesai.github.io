@@ -10,7 +10,7 @@
 
     <script>
       // COPY TO CLIPBOARD
-        $(".copy-link").click(function(event) {
+        function share_grave_link(event) {
 		alert();
   var url = "https://example.com"+event; // replace with your URL
   if (navigator.share) {
@@ -21,7 +21,7 @@
       .then(() => console.log('Successful share'))
       .catch((error) => console.log('Error sharing', error));
   } 
-        });
+        }
 
       // SHOW ALL DATA ORDER BY DATE
       async function loadFT(){
@@ -53,7 +53,7 @@
                 <li class="list-group-item"><b>Living at: </b>'+value.living_at+'</li>\
               </ul>\
               <div class="card-body">\
-                <a class="card-link copy-link" href="#asper_grave_id-'+value.grave_id+'">Copy link</a>\
+                <a class="card-link copy-link" onclick="share_grave_link(this)" href="#asper_grave_id-'+value.grave_id+'">Copy link</a>\
               </div>\
             </div>\
           ';
