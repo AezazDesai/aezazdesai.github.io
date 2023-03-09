@@ -27,7 +27,7 @@
         }
 
       // SHOW ALL DATA ORDER BY DATE
-      async function loadFT(){
+      async function loadDN(){
         const response = await fetch('DN.json');
         const dataArray = await response.json();
         
@@ -63,7 +63,7 @@
           $('#show_data').append(htmlCode);;
         });
       }
-      loadFT();
+      loadDN();
     </script>
   </head>
   <body>
