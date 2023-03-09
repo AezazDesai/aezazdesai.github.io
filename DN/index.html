@@ -11,11 +11,16 @@
     <script>
       // COPY TO CLIPBOARD
         function share_grave_link(event) {
-		alert();
-  var url = "https://example.com"+event; // replace with your URL
+          alert();
+          event.preventDefault(); 
+          var link = $(this).attr("href");
+          var url  = "https://jogwad.blogspot.com/2015/05/death-note-of-jogwad-village.html"+link;
+	  var person_name = 'View this person data';
+          //navigator.clipboard.writeText(url)
   if (navigator.share) {
     navigator.share({
       title: document.title,
+      text: person_name,
       url: url
     })
       .then(() => console.log('Successful share'))
