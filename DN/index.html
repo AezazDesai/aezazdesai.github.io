@@ -28,7 +28,12 @@
       // SHOW ALL DATA ORDER BY DATE
       async function loadFT(){
         const response = await fetch('DN.json');
-        const dataArray = await response.json();  
+        const dataArray = await response.json();
+        
+        // Sort the JSON data array by the date property
+			  dataArray.sort(function(a, b){
+				return new Date(a.date) - new Date(b.date);
+			});
         
         $.each(dataArray, function (key, value) { 
           var htmlCode = '\
