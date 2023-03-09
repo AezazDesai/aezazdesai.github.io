@@ -43,13 +43,13 @@
                 <li class="list-group-item"><b>Date: </b>' + value.eng_date + '</li>\
                 <li class="list-group-item"><b>Hijri Date: </b>' + value.hij_date + '</li>\
                 <li class="list-group-item"><b>DOB: </b>' + value.dob + '</li>\
-                <li class="list-group-item"><b>Age: </b>' + value.age + '</li>'
+                <li class="list-group-item"><b>Age: </b>' + value.age + '</li>';
                 if(value.grave_line != ''){
-                '<li class="list-group-item"><b>Grave Line: </b>' + value.grave_line + ' | <b>Number: </b>' + value.grave_number + '</li>'
+                  htmlCode += '<li class="list-group-item"><b>Grave Line: </b>' + value.grave_line + ' | <b>Number: </b>' + value.grave_number + '</li>';
                 } else {
-                  '<li class="list-group-item"><b>Grave At: </b> '+ value.grave_at +'</li>'
+                  htmlCode += '<li class="list-group-item"><b>Grave At: </b> '+ value.grave_at +'</li>';
                 }
-                '<li class="list-group-item"><b>Death Time: </b>' + value.death_time + '</li>\
+                htmlCode += '<li class="list-group-item"><b>Death Time: </b>' + value.death_time + '</li>\
                 <li class="list-group-item"><b>Burial Time: </b>' + value.burial_time + '</li>\
                 <li class="list-group-item"><b>Namaz-e-Janazah: </b>' + value.namaz_e_janazah + '</li>\
                 <li class="list-group-item"><b>Living at: </b>' + value.living_at + '</li>\
@@ -59,6 +59,7 @@
               </div>\
             </div>\
           ';
+
           $('#show_data').append(htmlCode);;
         });
       }
