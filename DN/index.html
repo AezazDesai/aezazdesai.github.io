@@ -11,9 +11,8 @@
     <script>
       // SHARE GRAVE LINK
         function share_grave_link(event) {
-		alert();
 //           event.preventDefault(); 
-          var link = $(this).attr("href");
+          var link = $(event).attr("href");
           var new_link  = "https://jogwad.blogspot.com/2015/05/death-note-of-jogwad-village.html/"+link;
           
 	if (navigator.share) {
