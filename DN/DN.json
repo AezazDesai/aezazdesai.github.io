@@ -1,30 +1,141 @@
-{
-   "death_data": {
-     "marhoom_data": [
-       {
-         "grave_id": "1",
-         "person_name": "Tom",
-         "person_meta": "His brother",
-         "eng_date": "",
-         "hij_date": "",
-         "dob": "",
-         "age": "",
-         "grave_line": "",
-         "grave_number": "",
-         "namaz_e_janazah": "",
-       }
-     ],
-     "yearly_milestone": [
-       {
-         "year_id": "1",
-         "year": "2000",
-       }
-     ],
-     "linewise_milestone": [
-       {
-         "line_id": "1",
-         "line_number": "1",
-       }
-     ]
-   }
- }
+[
+    {
+      "grave_id": "1",
+      "person_name": "Tom Heris Prinson",
+      "person_meta": "Tomy",
+      "eng_date": "28-01-2023",
+      "hij_date": "13-05-1444",
+      "dob": "null",
+      "age": "87 years",
+      "grave_line": "1",
+      "grave_number": "1",
+      "death_time": "10:30 AM",
+      "burial_time": "5:30 PM",
+      "namaz_e_janazah": "His Son"
+   },
+   {
+      "grave_id": "2",
+      "person_name": "Jenifer Mathews",
+      "person_meta": "Jenny",
+      "eng_date": "17-12-2022",
+      "hij_date": "11-04-1444",
+      "dob": "22-09-1935",
+      "age": "87 years",
+      "grave_line": "1",
+      "grave_number": "2",
+      "death_time": "12:45 PM",
+      "burial_time": "6:30 PM",
+      "namaz_e_janazah": "Her Grandson"
+   },
+   {
+      "grave_id": "3",
+      "person_name": "William James",
+      "person_meta": "Billy",
+      "eng_date": "08-05-2022",
+      "hij_date": "03-09-1443",
+      "dob": "01-03-1940",
+      "age": "82 years",
+      "grave_line": "2",
+      "grave_number": "1",
+      "death_time": "02:15 AM",
+      "burial_time": "11:30 AM",
+      "namaz_e_janazah": "His Nephew"
+   },
+   {
+      "grave_id": "4",
+      "person_name": "Sophie Johnson",
+      "person_meta": "Soph",
+      "eng_date": "19-07-2023",
+      "hij_date": "13-11-1444",
+      "dob": "09-02-1952",
+      "age": "71 years",
+      "grave_line": "34",
+      "grave_number": "1",
+      "death_time": "05:45 PM",
+      "burial_time": "9:30 PM",
+      "namaz_e_janazah": "Her Son"
+   },
+   {
+      "grave_id": "5",
+      "person_name": "Markus Andersson",
+      "person_meta": "Mark",
+      "eng_date": "01-09-2023",
+      "hij_date": "25-12-1444",
+      "dob": "20-11-1975",
+      "age": "47 years",
+      "grave_line": "50",
+      "grave_number": "20",
+      "death_time": "07:30 PM",
+      "burial_time": "12:30 PM",
+      "namaz_e_janazah": "His Daughter"
+   },
+   {
+      "grave_id": "6",
+      "person_name": "Emily Smith",
+      "person_meta": "Emmy",
+      "eng_date": "16-02-2023",
+      "hij_date": "12-05-1444",
+      "dob": "01-01-1935",
+      "age": "88 years",
+      "grave_line": "1",
+      "grave_number": "2",
+      "death_time": "8:00 AM",
+      "burial_time": "4:00 PM",
+      "namaz_e_janazah": "Her Daughter"
+   },
+   {
+      "grave_id": "7",
+      "person_name": "John Williams",
+      "person_meta": "Johnny",
+      "eng_date": "12-03-2023",
+      "hij_date": "08-05-1444",
+      "dob": "15-09-1948",
+      "age": "74 years",
+      "grave_line": "2",
+      "grave_number": "1",
+      "death_time": "11:45 PM",
+      "burial_time": "6:45 AM",
+      "namaz_e_janazah": "His Grandson"
+   },
+   {
+      "grave_id": "8",
+      "person_name": "Emma Davis",
+      "person_meta": "Emmy",
+      "eng_date": "07-02-2023",
+      "hij_date": "03-05-1444",
+      "dob": "23-11-1952",
+      "age": "70 years",
+      "grave_line": "2",
+      "grave_number": "2",
+      "death_time": "6:30 AM",
+      "burial_time": "2:30 PM",
+      "namaz_e_janazah": "Her Son"
+   },
+   {
+      "grave_id": "9",
+      "person_name": "Mark Thompson",
+      "person_meta": "Marky",
+      "eng_date": "22-01-2023",
+      "hij_date": "17-05-1444",
+      "dob": "null",
+      "age": "67 years",
+      "grave_line": "3",
+      "grave_number": "1",
+      "death_time": "1:15 PM",
+      "burial_time": "8:15 PM",
+      "namaz_e_janazah": "His Daughter"
+   },
+   {
+      "grave_id": "10",
+      "person_name": "Ava Johnson",
+      "person_meta": "Ava",
+      "eng_date": "05-03-2023",
+      "hij_date": "29-04-1444",
+      "dob": "12-12-1946",
+      "age": "76 years",
+      "grave_line": "3",
+      "grave_number": "2",
+      "death_time": "1:15 PM",
+      "burial_time": "8:15 PM",
+      "namaz_e_janazah": "His Daughter"
+]
