@@ -18,6 +18,7 @@
 	if (navigator.share) {
 	  navigator.share({
 	    title: document.title,
+	    text: 'Here you can see grave details.',
 	    url: new_link
 	  })
 	    .then(() => console.log('Successful share'))
