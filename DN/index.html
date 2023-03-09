@@ -10,7 +10,6 @@
 
     <script>
       // COPY TO CLIPBOARD
-      $(document).ready(function() {
         $(".copy-link").click(function(event) {
           event.preventDefault(); 
           var link = $(this).attr("href");
@@ -23,7 +22,6 @@
               alert("Failed to copy link: ", error);
             });
         });
-      });
 
       // SHOW ALL DATA ORDER BY DATE
       async function loadFT(){
