@@ -54,6 +54,11 @@
           ';
           $('#show_data').append(htmlCode);
       }
+      // SEARCH PERSON BY NAME
+      function searchPerson(){
+        var person_name = $('#person_name').val();
+        alert(person_name);
+      }
       // DEFAULT SHOW ALL DATA ORDER BY ENG DATE
       async function loadDN() {
         const response = await fetch('DN.json');
@@ -76,8 +81,8 @@
         <span class="text-muted">You can search grave by below options</span>
 
         <div class="input-group">
-          <input type="text" class="form-control" placeholder="Search by Marhumin Name" aria-label="Search by Marhumin Name">
-          <button class="btn btn-outline-secondary" type="button">Search</button>
+          <input type="text" class="form-control" id="person_name" name="person_name" placeholder="Search by Marhumin Name" aria-label="Search by Marhumin Name">
+          <button class="btn btn-outline-secondary" onclick="searchPerson()" type="button">Search</button>
           <button class="btn btn-outline-secondary" type="button">Reset</button>
         </div>
       </div>
