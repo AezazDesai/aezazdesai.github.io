@@ -67,14 +67,15 @@
         alert(person_name);
         const foundObj = dataArray.filter(obj => obj.person_name == person_name);
         alert(foundObj);
+        show_data(foundObj);
       }
 
       // DEFAULT SHOW ALL DATA ORDER BY ENG DATE
       function show_all(dataArray){
         // Sort the JSON data array by the date property
-        dataArray.sort(function(a, b) {
-          return new Date(a.eng_date) - new Date(b.eng_date);
-        });
+        // dataArray.sort(function(a, b) {
+        //   return new Date(a.eng_date) - new Date(b.eng_date);
+        // });
         $.each(dataArray, function(key, value) {
           show_data(value);
         });
