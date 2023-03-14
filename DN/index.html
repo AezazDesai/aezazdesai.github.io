@@ -81,7 +81,13 @@
         });
       }
 
-      show_all(dataArray());
+      // show_all(dataArray());
+      async function init() {
+        const dataArrayResult = await dataArray();
+        show_all(dataArrayResult);
+      }
+
+      init();
     </script>
   </head>
   <body>
