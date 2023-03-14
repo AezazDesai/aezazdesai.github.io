@@ -63,7 +63,7 @@
         const response = await fetch('DN.json');
         const dataArray = await response.json();
 
-        const foundObjs = dataArray.filter(obj => obj.person_name..toLowerCase().indexOf(person_name) !== -1);
+        const foundObjs = dataArray.filter(obj => obj.person_name.toLowerCase().indexOf(person_name) !== -1);
         
         console.log('fO: ' + JSON.stringify(foundObjs));
 
