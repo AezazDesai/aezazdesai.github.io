@@ -57,16 +57,26 @@
 
       // SEARCH PERSON BY NAME
       async function searchPerson() {
-        var person_name = $('#person_name').val();
-        alert('PN: '+person_name);
+        const person_name = $('#person_name').val();
+        console.log('PN: ' + person_name);
 
         const response = await fetch('DN.json');
         const dataArray = await response.json();
-        alert('dA: '+dataArray);
+        console.log('dA: ' + JSON.stringify(dataArray));
 
-        const foundObj = dataArray.filter(obj => obj.person_name === person_name);
-        alert('fO: '+foundObj);
-        show_data(foundObj);
+        const foundObjs = dataArray.filter(obj => obj.person_name === person_name);
+        console.log('fO: ' + JSON.stringify(foundObjs));
+
+        if (foundObjs.length > 0) {
+          // display the found objects
+          let output = '';
+          foundObjs.forEach(obj => {
+            output += `ID: ${obj.id}, Name: ${obj.person_name}\n`;
+          });
+          alert(output);
+        } else {
+          alert('No matching person found.');
+        }
       }
 
       // DEFAULT SHOW ALL DATA ORDER BY ENG DATE
