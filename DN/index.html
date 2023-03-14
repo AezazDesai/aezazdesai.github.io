@@ -58,13 +58,14 @@
       // SEARCH PERSON BY NAME
       async function searchPerson() {
         var person_name = $('#person_name').val();
+        alert('PN: '+person_name);
 
         const response = await fetch('DN.json');
         const dataArray = await response.json();
+        alert('dA: '+dataArray);
 
-        alert(person_name);
-        const foundObj = dataArray.filter(obj => obj.person_name == person_name);
-        alert(foundObj);
+        const foundObj = dataArray.filter(obj => obj.person_name === person_name);
+        alert('fO: '+foundObj);
         show_data(foundObj);
       }
 
