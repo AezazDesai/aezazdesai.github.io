@@ -63,7 +63,7 @@
         const response = await fetch('DN.json');
         const dataArray = await response.json();
 
-        const foundObjs = dataArray.filter(obj => obj.person_name == person_name);
+        const foundObjs = dataArray.filter(obj => obj.person_name.includes(person_name));
         console.log('fO: ' + JSON.stringify(foundObjs));
 
         if (foundObjs.length > 0) {
