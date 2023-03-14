@@ -54,13 +54,17 @@
           ';
           $('#show_data').append(htmlCode);
       }
+
       // SEARCH PERSON BY NAME
-      function searchPerson(){
+      function searchPerson(dataArray) {
         var person_name = $('#person_name').val();
         alert(person_name);
+        const foundObj = dataArray.filter(obj => obj.person_name == person_name);
+        alert(foundObj);
       }
+
       // DEFAULT SHOW ALL DATA ORDER BY ENG DATE
-      async function loadDN() {
+      // async function loadDN() {
         const response = await fetch('DN.json');
         const dataArray = await response.json();
         // Sort the JSON data array by the date property
@@ -70,7 +74,7 @@
         $.each(dataArray, function(key, value) {
           show_data(value);
         });
-      }
+      // }
       loadDN();
     </script>
   </head>
@@ -82,7 +86,7 @@
 
         <div class="input-group">
           <input type="text" class="form-control" id="person_name" name="person_name" placeholder="Search by Marhumin Name" aria-label="Search by Marhumin Name">
-          <button class="btn btn-outline-secondary" onclick="searchPerson()" type="button">Search</button>
+          <button class="btn btn-outline-secondary" onclick="searchPerson(dataArray)" type="button">Search</button>
           <button class="btn btn-outline-secondary" type="button">Reset</button>
         </div>
       </div>
