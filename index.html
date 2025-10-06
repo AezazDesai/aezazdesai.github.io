@@ -59,17 +59,16 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            background-color: var(--primary-light);
-            display: flex;
-            align-items: center;
-            justify-content: center;
             margin-bottom: 20px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+            overflow: hidden;
+            border: 4px solid white;
         }
 
-        .profile-image i {
-            font-size: 60px;
-            color: white;
+        .profile-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .name {
@@ -396,7 +395,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="profile-image">
-                    <i class="material-icons">person</i>
+                    <img src="https://www.jogwad.com/images/common/assistant_Aezaz_Desai.webp" alt="AEZAZ DESAI">
                 </div>
                 <h1 class="name">AEZAZ DESAI</h1>
                 <p class="tagline">Full Stack Developer | Project Manager | Quality Assurance Specialist</p>
