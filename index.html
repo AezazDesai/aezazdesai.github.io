@@ -14,7 +14,7 @@
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
@@ -27,116 +27,540 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: MyResume - v4.8.1
-  * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-  
   <style>
     :root {
-      --primary-color: #3498db;
-      --secondary-color: #2c3e50;
-      --accent-color: #e74c3c;
+      --primary-color: #4361ee;
+      --primary-dark: #3a56d4;
+      --secondary-color: #2b2d42;
+      --accent-color: #ef476f;
       --light-bg: #f8f9fa;
-      --dark-text: #2c3e50;
+      --dark-text: #2b2d42;
+      --light-text: #6c757d;
+      --gradient: linear-gradient(135deg, var(--primary-color) 0%, #7209b7 100%);
+      --card-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --hover-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
     }
-    
-    .hero-section {
-      background: linear-gradient(135deg, var(--secondary-color) 0%, var(--primary-color) 100%);
-      color: white;
-      padding: 120px 0 80px;
+
+    * {
+      scroll-behavior: smooth;
     }
-    
-    .skill-category {
-      margin-bottom: 30px;
-    }
-    
-    .skill-tag {
-      display: inline-block;
-      background-color: var(--light-bg);
+
+    body {
+      font-family: 'Inter', sans-serif;
       color: var(--dark-text);
-      padding: 8px 15px;
-      margin: 5px;
-      border-radius: 20px;
-      font-size: 0.9rem;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+    }
+
+    /* Header & Navigation */
+    #header {
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .nav-menu ul li a {
       font-weight: 500;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-    
-    .project-card {
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
-      margin-bottom: 30px;
-      height: 100%;
-    }
-    
-    .project-card:hover {
-      transform: translateY(-5px);
-    }
-    
-    .project-header {
-      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-      color: white;
-      padding: 20px;
-    }
-    
-    .project-body {
-      padding: 20px;
-    }
-    
-    .tech-badge {
-      display: inline-block;
-      background-color: var(--primary-color);
-      color: white;
-      padding: 5px 10px;
-      margin: 5px 5px 5px 0;
-      border-radius: 15px;
-      font-size: 0.8rem;
-    }
-    
-    .section-title {
       position: relative;
-      margin-bottom: 40px;
+      transition: all 0.3s ease;
     }
-    
-    .section-title:after {
+
+    .nav-menu ul li a::after {
       content: '';
       position: absolute;
-      bottom: -10px;
+      width: 0;
+      height: 2px;
+      bottom: 0;
       left: 0;
-      width: 60px;
-      height: 3px;
-      background-color: var(--primary-color);
+      background: var(--gradient);
+      transition: width 0.3s ease;
     }
-    
-    .contact-info-item {
+
+    .nav-menu ul li a:hover::after,
+    .nav-menu ul li a.active::after {
+      width: 100%;
+    }
+
+    .mobile-nav-toggle {
+      color: var(--secondary-color);
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background: var(--gradient);
+      color: white;
+      padding: 160px 0 100px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-section::before {
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: -50%;
+      left: -50%;
+      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);
+      z-index: 1;
+    }
+
+    .hero-section .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-section h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      background: linear-gradient(90deg, #fff, #e0e0e0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .typed-text {
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      font-weight: 400;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 44px;
+      height: 44px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      margin-right: 10px;
+      color: white;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-3px);
+    }
+
+    /* Section Styling */
+    section {
+      padding: 100px 0;
+    }
+
+    .section-title {
+      position: relative;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: 2.5rem;
+      font-weight: 700;
       margin-bottom: 15px;
+      color: var(--secondary-color);
+    }
+
+    .section-title p {
+      font-size: 1.1rem;
+      color: var(--light-text);
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: var(--gradient);
+      border-radius: 2px;
+    }
+
+    /* About Section */
+    .about {
+      background-color: var(--light-bg);
+    }
+
+    .about-content h3 {
+      font-size: 1.8rem;
+      margin-bottom: 20px;
+      color: var(--secondary-color);
+    }
+
+    .about-content .fst-italic {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      color: var(--light-text);
+      margin-bottom: 25px;
+    }
+
+    .about-info {
+      margin-bottom: 30px;
+    }
+
+    .about-info ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .about-info ul li {
+      margin-bottom: 10px;
       display: flex;
       align-items: center;
     }
-    
-    .contact-info-item i {
-      margin-right: 10px;
+
+    .about-info ul li i {
       color: var(--primary-color);
-      font-size: 1.2rem;
+      margin-right: 10px;
+      font-size: 1.1rem;
     }
-    
-    .language-item {
+
+    .about-info ul li strong {
+      min-width: 100px;
+      display: inline-block;
+    }
+
+    /* Skills Section */
+    .skills {
+      position: relative;
+    }
+
+    .skill-category {
+      margin-bottom: 40px;
+    }
+
+    .skill-category h4 {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+      color: var(--secondary-color);
+      position: relative;
+      display: inline-block;
+    }
+
+    .skill-category h4::after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 3px;
+      background: var(--primary-color);
+      bottom: -5px;
+      left: 0;
+    }
+
+    .skill-tag {
+      display: inline-block;
+      background: white;
+      color: var(--dark-text);
+      padding: 10px 18px;
+      margin: 8px 8px 8px 0;
+      border-radius: 50px;
+      font-size: 0.95rem;
+      font-weight: 500;
+      box-shadow: var(--card-shadow);
+      transition: all 0.3s ease;
+      border: 1px solid #f0f0f0;
+    }
+
+    .skill-tag:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--hover-shadow);
+      background: var(--primary-color);
+      color: white;
+    }
+
+    /* Projects Section */
+    .projects {
+      background-color: var(--light-bg);
+    }
+
+    .project-card {
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: var(--card-shadow);
+      transition: all 0.4s ease;
+      margin-bottom: 30px;
+      height: 100%;
+      background: white;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--hover-shadow);
+    }
+
+    .project-header {
+      background: var(--gradient);
+      color: white;
+      padding: 25px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project-header::before {
+      content: '';
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      top: -75px;
+      right: -75px;
+    }
+
+    .project-header h4 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
+
+    .project-body {
+      padding: 25px;
+    }
+
+    .project-body p {
+      color: var(--light-text);
+      margin-bottom: 20px;
+    }
+
+    .tech-badge {
+      display: inline-block;
+      background: var(--primary-color);
+      color: white;
+      padding: 6px 12px;
+      margin: 5px 5px 5px 0;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    .project-body ul {
+      padding-left: 20px;
+      margin-top: 15px;
+    }
+
+    .project-body ul li {
+      margin-bottom: 8px;
+      color: var(--light-text);
+    }
+
+    /* Resume Section */
+    .resume-item {
+      margin-bottom: 40px;
+      padding: 30px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: var(--card-shadow);
+      transition: all 0.3s ease;
+    }
+
+    .resume-item:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--hover-shadow);
+    }
+
+    .resume-item h4 {
+      font-size: 1.3rem;
+      color: var(--secondary-color);
+      margin-bottom: 5px;
+    }
+
+    .resume-item h5 {
+      font-size: 1rem;
+      color: var(--primary-color);
       margin-bottom: 10px;
+      font-weight: 500;
     }
-    
+
+    .resume-item p em {
+      color: var(--light-text);
+    }
+
+    .resume-item ul {
+      padding-left: 20px;
+      margin-top: 15px;
+    }
+
+    .resume-item ul li {
+      margin-bottom: 8px;
+      color: var(--light-text);
+    }
+
+    .language-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 12px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
     .language-name {
       font-weight: 600;
-      margin-right: 10px;
+      color: var(--secondary-color);
     }
-    
+
     .language-level {
-      color: #666;
+      color: var(--light-text);
       font-style: italic;
+    }
+
+    /* Footer */
+    #footer {
+      background: var(--secondary-color);
+      color: white;
+      padding: 60px 0 30px;
+    }
+
+    #footer h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    #footer p {
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 25px;
+    }
+
+    #footer .social-links a {
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+
+    #footer .social-links a:hover {
+      background: var(--primary-color);
+    }
+
+    .copyright {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 0.9rem;
+    }
+
+    /* Back to top button */
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background: var(--gradient);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .back-to-top.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .hero-section h1 {
+        font-size: 2.8rem;
+      }
+      
+      .section-title h2 {
+        font-size: 2rem;
+      }
+      
+      section {
+        padding: 80px 0;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-section {
+        padding: 130px 0 80px;
+      }
+      
+      .hero-section h1 {
+        font-size: 2.3rem;
+      }
+      
+      .typed-text {
+        font-size: 1.3rem;
+      }
+      
+      .section-title h2 {
+        font-size: 1.8rem;
+      }
+      
+      .about-info ul li {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .about-info ul li strong {
+        min-width: auto;
+        margin-bottom: 5px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+      
+      .typed-text {
+        font-size: 1.1rem;
+      }
+      
+      .section-title h2 {
+        font-size: 1.6rem;
+      }
+      
+      .project-header, .project-body {
+        padding: 20px;
+      }
+      
+      .resume-item {
+        padding: 20px;
+      }
+    }
+
+    /* Animation Classes */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .fade-in.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--primary-color);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--primary-dark);
     }
   </style>
 </head>
@@ -145,6 +569,7 @@
 
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  
   <!-- ======= Header ======= -->
   <header id="header" class="d-flex flex-column justify-content-center">
     <nav id="navbar" class="navbar nav-menu">
@@ -162,7 +587,7 @@
   <section id="hero" class="d-flex flex-column justify-content-center hero-section">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
       <h1>Aezaz Desai</h1>
-      <p><span class="typed" data-typed-items="Software Engineer, Full Stack Developer, Next.js Specialist, Project Manager"></span></p>
+      <p class="typed-text"><span class="typed" data-typed-items="Software Engineer, Full Stack Developer, Next.js Specialist, Project Manager"></span></p>
       <div class="social-links">
         <a href="https://mobile.twitter.com/aezaz_desai" class="twitter"><i class="bx bxl-twitter"></i></a>
         <a href="https://www.facebook.com/desai.aezaz" class="facebook"><i class="bx bxl-facebook"></i></a>
@@ -183,27 +608,27 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-8 pt-4 pt-lg-0 content">
+          <div class="col-lg-12 pt-4 pt-lg-0 content about-content">
             <h3>Software Engineer &amp; Full Stack Developer</h3>
             <p class="fst-italic">
               Over the past three years, I have led and managed diverse IT projects while ensuring top-notch software quality. Currently, I'm focused on building my career as a Software Developer, specializing in Next.js, TypeScript, Material UI, and Firebase.
             </p>
-            <div class="row">
+            
+            <div class="row about-info">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.aezazdesai.cf</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+91 7874055847</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Gujarat, India</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Navsari, Gujarat, India</span></li>
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>24</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Diploma & Bachelor in Engineering</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>aezazdesai@gmail.com</span></li>
                 </ul>
               </div>
             </div>
+            
             <p>
               I enjoy developing responsive, scalable, and SEO-friendly web applications that provide meaningful user experiences. My background in project management and quality assurance gives me a unique perspective on software development, allowing me to bridge the gap between technical implementation and user needs.
             </p>
@@ -213,7 +638,7 @@
     </section><!-- End About Section -->
 
     <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills section-bg">
+    <section id="skills" class="skills">
       <div class="container" data-aos="fade-up">
         <div class="section-title">
           <h2>Technical Skills</h2>
@@ -239,8 +664,6 @@
               <h4>Backend & Database</h4>
               <div>
                 <span class="skill-tag">Firebase</span>
-                <span class="skill-tag">Node.js</span>
-                <span class="skill-tag">REST APIs</span>
                 <span class="skill-tag">PHP</span>
               </div>
             </div>
@@ -380,15 +803,15 @@
             <div class="resume-item">
               <div class="language-item">
                 <span class="language-name">English</span>
-                <span class="language-level">— Limited Working Proficiency</span>
+                <span class="language-level">Limited Working Proficiency</span>
               </div>
               <div class="language-item">
                 <span class="language-name">Hindi</span>
-                <span class="language-level">— Professional Working Proficiency</span>
+                <span class="language-level">Professional Working Proficiency</span>
               </div>
               <div class="language-item">
                 <span class="language-name">Gujarati</span>
-                <span class="language-level">— Native or Bilingual Proficiency</span>
+                <span class="language-level">Native or Bilingual Proficiency</span>
               </div>
             </div>
           </div>
@@ -457,6 +880,47 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <script>
+    // Back to top button functionality
+    const backToTopButton = document.querySelector('.back-to-top');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('active');
+      } else {
+        backToTopButton.classList.remove('active');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    
+    // Fade in animation on scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const appearOnScroll = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appear');
+        }
+      });
+    }, { threshold: 0.1 });
+    
+    fadeElements.forEach(element => {
+      appearOnScroll.observe(element);
+    });
+    
+    // Add fade-in class to elements for animation
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => {
+        section.classList.add('fade-in');
+      });
+    });
+  </script>
 
 </body>
 
