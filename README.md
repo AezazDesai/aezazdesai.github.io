@@ -2,7 +2,7 @@
 
 ![Website](https://img.shields.io/badge/Website-aezazdesai.github.io-blue) ![LinkedIn](https://img.shields.io/badge/LinkedIn-Aezaz%20Desai-blue?logo=linkedin&logoColor=white) ![Email](https://img.shields.io/badge/Email-aezazdesai@gmail.com-blue)
 
-📍 Jogwad Village, Navsari, Gujarat, India  
+📍 Navsari, Gujarat, India  
 📧 aezazdesai@gmail.com | 📞 +91 7874055847  
 
 ---
@@ -16,7 +16,7 @@ I enjoy building **scalable, responsive, and SEO-friendly web applications** tha
 ## 🧰 Technical Skills
 
 **Frontend:** React.js, Next.js (App Router), TypeScript, Material UI (MUI), HTML5, CSS3, JavaScript (ES6+)  
-**Backend & Database:** Firebase, Node.js, REST APIs  
+**Backend & Database:** Firebase, PHP  
 **Tools & Platforms:** GitHub, Vercel, VS Code, Jira, Postman  
 **Testing & QA:** Manual Testing, API Testing, Bug Reporting, UI/UX Testing  
 **Soft Skills:** Leadership, Problem-Solving, Time Management, Team Collaboration
